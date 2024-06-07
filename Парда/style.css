@@ -1,0 +1,243 @@
+body {
+  background: #eeeeee;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.lever-1 .lever-container-1,
+.lever-1 .lever-container-2,
+.lever-2 .lever-container-1,
+.lever-2 .lever-container-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 18px;
+  cursor: pointer;
+  z-index: 10;
+}
+.lever-1 .lever-container-1 .lever-contents-1,
+.lever-1 .lever-container-1 .lever-contents-2,
+.lever-1 .lever-container-2 .lever-contents-1,
+.lever-1 .lever-container-2 .lever-contents-2,
+.lever-2 .lever-container-1 .lever-contents-1,
+.lever-2 .lever-container-1 .lever-contents-2,
+.lever-2 .lever-container-2 .lever-contents-1,
+.lever-2 .lever-container-2 .lever-contents-2 {
+  height: 100%;
+  width: 3px;
+  background-color: black;
+  z-index: 10;
+}
+.lever-1 .lever-container-1 .lever-contents-1:before, .lever-1 .lever-container-1 .lever-contents-1:after,
+.lever-1 .lever-container-1 .lever-contents-2:before,
+.lever-1 .lever-container-1 .lever-contents-2:after,
+.lever-1 .lever-container-2 .lever-contents-1:before,
+.lever-1 .lever-container-2 .lever-contents-1:after,
+.lever-1 .lever-container-2 .lever-contents-2:before,
+.lever-1 .lever-container-2 .lever-contents-2:after,
+.lever-2 .lever-container-1 .lever-contents-1:before,
+.lever-2 .lever-container-1 .lever-contents-1:after,
+.lever-2 .lever-container-1 .lever-contents-2:before,
+.lever-2 .lever-container-1 .lever-contents-2:after,
+.lever-2 .lever-container-2 .lever-contents-1:before,
+.lever-2 .lever-container-2 .lever-contents-1:after,
+.lever-2 .lever-container-2 .lever-contents-2:before,
+.lever-2 .lever-container-2 .lever-contents-2:after {
+  position: absolute;
+  content: "";
+  left: 0px;
+  width: 18px;
+  height: 18px;
+  background-color: black;
+  border-radius: 50%;
+}
+.lever-1 .lever-container-1 .lever-contents-1:before,
+.lever-1 .lever-container-1 .lever-contents-2:before,
+.lever-1 .lever-container-2 .lever-contents-1:before,
+.lever-1 .lever-container-2 .lever-contents-2:before,
+.lever-2 .lever-container-1 .lever-contents-1:before,
+.lever-2 .lever-container-1 .lever-contents-2:before,
+.lever-2 .lever-container-2 .lever-contents-1:before,
+.lever-2 .lever-container-2 .lever-contents-2:before {
+  bottom: -15px;
+}
+.lever-1 .lever-container-1 .lever-contents-1:after,
+.lever-1 .lever-container-1 .lever-contents-2:after,
+.lever-1 .lever-container-2 .lever-contents-1:after,
+.lever-1 .lever-container-2 .lever-contents-2:after,
+.lever-2 .lever-container-1 .lever-contents-1:after,
+.lever-2 .lever-container-1 .lever-contents-2:after,
+.lever-2 .lever-container-2 .lever-contents-1:after,
+.lever-2 .lever-container-2 .lever-contents-2:after {
+  bottom: -30px;
+}
+
+#inp-lever-1 {
+  display: none;
+}
+#inp-lever-1:checked ~ .lever-1 .lever-container-1 {
+  height: 70vh;
+}
+#inp-lever-1:checked ~ ul .blinds {
+  height: 1px;
+}
+
+.lever-1 .lever-container-1 {
+  height: 40vh;
+  right: 14%;
+  transition: height 500ms ease;
+}
+.lever-1 .lever-container-1 .lever-contents-1 {
+  box-shadow: 15px 15px 5px rgba(0, 0, 0, 0.3);
+}
+.lever-1 .lever-container-1 .lever-contents-1:before, .lever-1 .lever-container-1 .lever-contents-1:after {
+  box-shadow: 15px 15px 5px rgba(0, 0, 0, 0.3);
+}
+
+#inp-lever-2 {
+  display: none;
+}
+#inp-lever-2:checked ~ .lever-2 .lever-container-2 {
+  transform: rotate3d(0, 1, 0, 180deg);
+}
+#inp-lever-2:checked ~ .lever-2 .lever-shadow-container {
+  transform: rotate3d(0, 1, 0, 180deg);
+}
+#inp-lever-2:checked ~ ul .blinds {
+  transform: rotateX(80deg);
+}
+
+.lever-2 .lever-container-2 {
+  transition: transform 500ms ease;
+  height: 60vh;
+  right: 10%;
+}
+
+.lever-shadow-container {
+  top: 15px;
+  pointer-events: none;
+  transition: transform 500ms ease;
+  height: 60vh;
+  right: calc(10% - 15px);
+  filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 18px;
+  cursor: pointer;
+  z-index: 10;
+}
+.lever-shadow-container .lever-shadow-contents {
+  height: 100%;
+  width: 3px;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+.lever-shadow-container .lever-shadow-contents:before, .lever-shadow-container .lever-shadow-contents:after {
+  position: absolute;
+  content: "";
+  left: 0px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.lever-shadow-container .lever-shadow-contents:before {
+  bottom: -15px;
+}
+.lever-shadow-container .lever-shadow-contents:after {
+  bottom: -30px;
+}
+
+.blinds-container {
+  position: relative;
+  width: 600px;
+  display: flex;
+  justify-content: center;
+}
+.blinds-container ul {
+  padding: 0;
+  display: grid;
+  grid-column-gap: 10px;
+  grid-template-columns: 100px 100px 100px 100px 100px;
+}
+.blinds-container ul li {
+  list-style: none;
+  width: 100%;
+  height: 15px;
+  background-color: #a13d2d;
+  transform: skew(15deg);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  transition: transform 500ms ease, height 1000ms ease;
+  z-index: 1;
+}
+
+.upper-box {
+  position: absolute;
+  height: 20px;
+  width: 600px;
+  background-color: black;
+  z-index: 20;
+  box-shadow: 15px 15px 5px rgba(0, 0, 0, 0.3);
+}
+
+.under-box {
+  position: absolute;
+  height: 20px;
+  width: 600px;
+  background-color: black;
+  z-index: 1;
+}
+
+.windows-container {
+  top: 0;
+  z-index: 0;
+  position: absolute;
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding-top: 10px;
+  background-color: #cca19a;
+}
+.windows-container .windows {
+  padding-top: 11px;
+  text-align: center;
+  display: grid;
+  grid-column-gap: 0px;
+  grid-template-columns: repeat(5, minmax(110px, 0fr));
+  height: 4%;
+}
+.windows-container .windows > * {
+  border: 10px solid #a13d2d70;
+  height: 280px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  line-height: 30px;
+  font-size: 12.5px;
+  font-weight: bold;
+  color: #a13d2d;
+}
+
+body {
+  background-color: #cca19a;
+}
+
+.lever-container-1 {
+  animation: auto-1 5s infinite;
+}
+
+@keyframes auto-1 {
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

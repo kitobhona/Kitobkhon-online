@@ -1,0 +1,149 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+body {
+  margin: 0;
+  background: linear-gradient(15deg, teal, #448866);
+  background: -webkit-linear-gradient(115deg, teal, #448866);
+}
+
+div {
+  text-align: center;
+  margin-top: 100px;
+}
+/* ----------- Button 2 --------------- */
+div:nth-child(1) button {
+  width: 250px;
+  height: 75px;
+  background: whitesmoke;
+  border: none;
+  border-radius: 0px;
+  font-family: "Montserrat", sans-serif;
+  color: teal;
+  font-size: 1.5em;
+  font-weight: 400;
+  line-height: 2.6em;
+  transition: all 0.5s;
+}
+
+div:nth-child(1) button:hover {
+  width: 100%;
+  background: salmon;
+  color: whitesmoke;
+}
+
+/* ----------- Button 2 --------------- */
+div:nth-child(2) button {
+  width: 250px;
+  height: 75px;
+  background: whitesmoke;
+  border: none;
+  border-radius: 0px;
+  font-family: "Montserrat", sans-serif;
+  color: teal;
+  font-size: 1.5em;
+  font-weight: 400;
+  line-height: 2.6em;
+  transition: all 0.5s;
+}
+
+div:nth-child(2) button:hover {
+  width: 100%;
+  background: salmon;
+  color: whitesmoke;
+}
+
+/* ----------- Button 2 --------------- */
+div:nth-child(3) button {
+  width: 250px;
+  height: 75px;
+  background: whitesmoke;
+  border: none;
+  border-radius: 0px;
+  font-family: "Montserrat", sans-serif;
+  color: teal;
+  font-size: 1.5em;
+  font-weight: 400;
+  line-height: 2.6em;
+  transition: all 0.5s;
+}
+
+div:nth-child(3) button:hover {
+  width: 100%;
+  background: salmon;
+  color: whitesmoke;
+}
+
+/* ----------- Button 2 --------------- */
+div:nth-child(4) button {
+  width: 250px;
+  height: 75px;
+  background: whitesmoke;
+  border: none;
+  border-radius: 0px;
+  font-family: "Montserrat", sans-serif;
+  color: teal;
+  font-size: 1.5em;
+  font-weight: 400;
+  line-height: 2.6em;
+  transition: all 0.5s;
+}
+
+div:nth-child(4) button:hover {
+  width: 100%;
+  background: salmon;
+  color: whitesmoke;
+}
+/* ----------- Button 5 --------------- */
+div:nth-child(5) button {
+  width: 250px;
+  height: 75px;
+  background: whitesmoke;
+  border: none;
+  border-radius: 0px;
+  font-family: "Montserrat", sans-serif;
+  color: teal;
+  font-size: 1.5em;
+  font-weight: 400;
+  line-height: 2.6em;
+  transition: all 0.5s;
+}
+
+div:nth-child(5) button:hover {
+  width: 100%;
+  background: salmon;
+  color: whitesmoke;
+}
+
+
+
+@keyframes spanShiftRight {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: 0px;
+  }
+  60% {
+    top: -3px;
+  }
+  70% {
+    top: 0px;
+  }
+  80% {
+    top: -2px;
+  }
+  90% {
+    top: 0px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+div:nth-child(11) button {
+  border-radius: 50px;
+  line-height: 0;
+}
+div:nth-child(11) button:hover {
+  border: 2px solid salmon;
+  background: transparent;
+  color: salmon;
+}
